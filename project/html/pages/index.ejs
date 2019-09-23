@@ -7,16 +7,36 @@
   <!-- the classes 'page-header' and 'btn btn-dark' create bootstrap components.  -->
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
-
+    <% include ../helpers/navbar %>
   
     <h1>Hello World</h1>
   </div>
+
+  <input class="search" type="text" placeholder="Enter City Name">
+  <button type="button" onclick="searchWeather()">Search</button>
+  <div class="error-message"></div>
+
+  <button onclick="handleSignIn()">Log In</button>
+
+  <form  action="#">
+    Title: <br>
+    <input id="post-title"> <br>
+    Body: <br>
+    <textarea id="post-body" cols="30" rows="10"></textarea> <br>
+    <button onClick="handleMessageFormSubmit()">Submit</button>
+  </form>
+
+  <div id="post-listing"></div>
 
   <p>Click on the button for a surprise.</p>
 
   <button onClick="showPicture()" class="btn btn-dark">Click me</button>
 
   <div id="image"></div>
+
+  <div class="city"></div>
+
+  <div class="temp"></div>
   
 </body>
 
